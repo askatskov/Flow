@@ -1,7 +1,7 @@
 ﻿using Flow.Data;
 using Flow.Domain;
 
-namespace CatRegistry.Data
+namespace Flow.Data
 {
 	public class DbInitializer
 	{
@@ -12,7 +12,7 @@ namespace CatRegistry.Data
 				return;
 			}
 
-			var kittys = new Music[]
+			var musics = new Music[]
 			{
 				new Music()
 				{
