@@ -1,0 +1,36 @@
+﻿@model Flow.Models.Musics.MusicDeleteViewModel
+
+
+<h1>@Html.DisplayFor(model => model.Artist)</h1>
+
+<div>
+    <h4>Delete review</h4>
+    <hr />
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="ArtistId" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.ArtistId)
+        </div>
+        @foreach (var image in Model.Image)
+        {
+            <partial name="_Images" model="image" />
+        }
+        <div class="form-group row">
+            <label asp-for="Artist" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Artist)
+        </div>
+        <div class="form-group row">
+            <label asp-for="Song" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Song)
+        </div>
+
+
+    </dl>
+    <form asp-action="DeleteConfirmation">
+        <input type="hidden" asp-for="ArtistId" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" asp-controller="Music" class="btn btn-secondary danger">Back</a>
+
+    </form>
+
+</div>

@@ -1,6 +1,6 @@
 ﻿using Flow.Models.Music;
 
-namespace Flow.Models.Music
+namespace Flow.Models.Musics
 {
     public class MusicDetailsViewModel
     {
