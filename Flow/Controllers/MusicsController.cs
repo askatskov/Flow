@@ -27,6 +27,9 @@ namespace Flow.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
+			var Name = HttpContext.Session.GetString("Name");
+			ViewBag.Name = Name;
+
 			var resultingInventory = _context.Musics
                 .OrderByDescending(y => y.Rating)
 				.Select(x => new MusicIndexViewModel

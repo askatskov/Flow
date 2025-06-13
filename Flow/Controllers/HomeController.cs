@@ -15,7 +15,9 @@ namespace Flow.Controllers
 
         public IActionResult Index()
         {
-            return View();
+			var Name = HttpContext.Session.GetString("Name");
+			ViewBag.Name = Name;
+			return View();
         }
 
         public IActionResult Privacy()
